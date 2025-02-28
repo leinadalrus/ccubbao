@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import ent.darriwills.qbao.data.repository.ProductsRepository;
+import ent.darriwills.qbao.middleware.ProductsModelAssembler;
 import ent.darriwills.qbao.models.Products;
 
 @RestController
@@ -30,7 +32,7 @@ public class ProductsController {
     }
 
     @PostMapping("/products")
-    ResponseEntity<?> newProducts(@RequestBody Products newProduct) {
+    ResponseEntity<?> newProduct(@RequestBody Products newProduct) {
         EntityModel<Products> model = assembler.toModel(
             repository.save(newProduct));
         
@@ -40,7 +42,7 @@ public class ProductsController {
     }
 
     @PutMapping("/products/{id}")
-    ResponseEntity<?> replaceProducts(@RequestBody Products newProduct,
+    ResponseEntity<?> updateProduct(@RequestBody Products newProduct,
         @PathVariable Long id
     ) {
         Products updatedProduct = repository.findById(id)
@@ -49,6 +51,8 @@ public class ProductsController {
                 product.setDescription(newProduct.getDescription());
                 product.setHeroImage(newProduct.getHeroImage());
                 product.setDateStamp(newProduct.getDateStamp());
+
+                return repository.save(product);
             })
             .orElseGet(() -> {
                 return repository.save(newProduct);
@@ -77,5 +81,11 @@ public class ProductsController {
             .orElseThrow(() -> new ProductsNotFoundException(id));
 
         return assembler.toModel(product);
+    }
+
+    @DeleteMapping("/products/{id}")
+    ResponseEntity<?> deleteProduct(@PathVariable Long id) {
+        repository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }
