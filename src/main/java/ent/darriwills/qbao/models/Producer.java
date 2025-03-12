@@ -1,11 +1,13 @@
 package ent.darriwills.qbao.models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistent.GeneratedValue;
-import jakarta.persistent.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Producer {
+@Table(name = "producers")
+public class Producer extends User {
     private @Id @Generated Long id;
     private String username;
     private String membership;

@@ -1,10 +1,12 @@
 package ent.darriwills.qbao.models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistent.GeneratedValue;
-import jakarta.persistent.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "products")
 public class Products {
     @Id @Generated private Long id;
     private String name;

@@ -1,11 +1,13 @@
 package ent.darriwills.qbao.models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistent.GeneratedValue;
-import jakarta.persistent.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Consumer {
+@Table(name = "consumers")
+public class Customer extends User {
     private @Id @Generated Long id;
     private String username;
     private String membership;
@@ -13,7 +15,7 @@ public class Consumer {
     private String avatar;
     private String timeStamp;
 
-    public Consumer(String username,
+    public Customer(String username,
         String membership,
         String avatar,
         String timeStamp
@@ -24,7 +26,7 @@ public class Consumer {
         this.timeStamp = timeStamp;
     }
 
-    public Consumer() {}
+    public Customer() {}
 
     public Long getId() {
         return id;
@@ -66,14 +68,14 @@ public class Consumer {
         public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (!(o instanceof Consumer))
+        if (!(o instanceof Customer))
             return false;
 
-        Consumer consumer = (Consumer) o;
+        Customer customer = (Customer) o;
 
-        return Objects.equals(this.id, consumer.id)
-            && Objects.equals(this.username, consumer.username)
-            && Objects.equals(this.timeStamp, consumer.timeStamp);
+        return Objects.equals(this.id, customer.id)
+            && Objects.equals(this.username, customer.username)
+            && Objects.equals(this.timeStamp, customer.timeStamp);
     }
 
     @Override
@@ -83,7 +85,7 @@ public class Consumer {
 
     @Override
     public String toString() {
-        return "Consumer{" + "id=" + this.id + ", username=" + this.username + "'\'"
+        return "Customer{" + "id=" + this.id + ", username=" + this.username + "'\'"
             + ", timeStamp=" + this.timeStamp + "}";
     }
 }

@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import ent.darriwills.qbao.middleware.exceptions.ProductsNotFoundException;
+import ent.darriwills.qbao.middleware.exceptions.OrdersNotFoundException;
 
 @RestControllerAdvice
-class ProductsNotFoundAdvice {
-    @ExceptionHandler(ProductsNotFoundException.class)
+class OrdersNotFoundAdvice {
+    @ExceptionHandler(OrdersNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String productsNotFoundHandler(ProductsNotFoundException exception) {
+    String ordersNotFoundHandler(OrdersNotFoundException exception) {
         return exception.getMessage();
     }
 }

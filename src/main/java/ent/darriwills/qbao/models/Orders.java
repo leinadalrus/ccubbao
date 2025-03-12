@@ -1,8 +1,8 @@
 package ent.darriwills.qbao.models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistent.GeneratedValue;
-import jakarta.persistent.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 public class Orders {
     private @Id @GeneratedValue Long id;
