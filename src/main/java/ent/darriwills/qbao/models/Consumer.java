@@ -1,5 +1,6 @@
 package ent.darriwills.qbao.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -8,11 +9,15 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "consumers")
 public class Customer extends User {
-    private @Id @Generated Long id;
+    private @Id Long id;
+
+    @Column(name = "username")
     private String username;
     private String membership;
 
     private String avatar;
+
+    @Column(name = "timestamp")
     private String timeStamp;
 
     public Customer(String username,

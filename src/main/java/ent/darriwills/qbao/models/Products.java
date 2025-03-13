@@ -1,6 +1,8 @@
 package ent.darriwills.qbao.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -8,11 +10,19 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "products")
 public class Products {
-    @Id @Generated private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "description")
     private String description;
 
     private String heroImage;
+
+    @Column(name = "dateStamp")
     private String dateStamp;
 
     public Products(String name,

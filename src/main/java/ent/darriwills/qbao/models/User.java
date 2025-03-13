@@ -1,12 +1,16 @@
 package ent.darriwills.qbao.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
 public class User {
-    private @Id @Generated Long id;
+    @Id 
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private
+    Long id;
 
     public User() {}
 
