@@ -1,0 +1,11 @@
+<p>dashboard works!</p>
+
+<main *ngif="getMemberAuthority(); then thenBlock else elseBlock">
+    <ng-template #thenBlock>
+        <app-member-layout></app-member-layout>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <app-guest-layout></app-guest-layout>
+    </ng-template>
+</main>

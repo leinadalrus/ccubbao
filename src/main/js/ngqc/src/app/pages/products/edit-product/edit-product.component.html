@@ -1,0 +1,23 @@
+<p>edit-product works!</p>
+
+<form
+  [formGroup]="productForm"
+  (ngSubmit)="onSubmit()"
+  action=""
+  method="post"
+  class="mx-auto flex max-w-sm items-center gap-6 p-8 rounded-2xl"
+>
+  <label for="title" class="text-xl font-bold text-sky-600">Title</label>
+  <input [(ngModel)]="productForm" formControlName="title" type="text" />
+
+  <label for="description" class="text-xl font-medium text-black">Title</label>
+  <input [(ngModel)]="productForm" formControlName="description" type="text" />
+
+  <input
+    type="submit"
+    name="updated_product"
+    value="Update Product"
+    [disabled]="!productForm.valid"
+    (click)="updateProduct()"
+  />
+</form>
