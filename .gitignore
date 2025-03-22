@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### My Front-end Projects ###
+!**/src//main/js/**
