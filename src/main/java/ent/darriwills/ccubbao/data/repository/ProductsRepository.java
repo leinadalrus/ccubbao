@@ -1,7 +1,7 @@
-package ent.darriwills.qbao.data.repository;
+package ent.darriwills.ccubbao.data.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import ent.darriwills.qbao.models.Products;
+import ent.darriwills.ccubbao.models.Products;
 
 interface ProductsRepository extends JpaRepository<Products, Long> {}

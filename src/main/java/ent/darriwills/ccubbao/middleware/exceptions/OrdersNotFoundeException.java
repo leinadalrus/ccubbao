@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.middleware.exceptions;
+package ent.darriwills.ccubbao.middleware.exceptions;
 
 interface OrdersNotFoundException extends RuntimeException {
     public OrdersNotFoundException(Long id) {

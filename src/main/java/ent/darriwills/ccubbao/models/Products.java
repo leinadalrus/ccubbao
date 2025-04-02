@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.models;
+package ent.darriwills.ccubbao.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

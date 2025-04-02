@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.middleware.assemblers;
+package ent.darriwills.ccubbao.middleware.assemblers;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 

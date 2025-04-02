@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.controllers;
+package ent.darriwills.ccubbao.controllers;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import ent.darriwills.qbao.data.repository.OrdersRepository;
-import ent.darriwills.qbao.middleware.OrdersModelAssembler;
-import ent.darriwills.qbao.models.Orders;
+import ent.darriwills.ccubbao.data.repository.OrdersRepository;
+import ent.darriwills.ccubbao.middleware.OrdersModelAssembler;
+import ent.darriwills.ccubbao.models.Orders;
 
 @RestController
 public class OrdersController {

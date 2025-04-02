@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.controllers;
+package ent.darriwills.ccubbao.controllers;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import ent.darriwills.qbao.data.repository.UserRepository;
-import ent.darriwills.qbao.middleware.UserModelAssembler;
-import ent.darriwills.qbao.models.User;
+import ent.darriwills.ccubbao.data.repository.UserRepository;
+import ent.darriwills.ccubbao.middleware.UserModelAssembler;
+import ent.darriwills.ccubbao.models.User;
 
 @RestController
 public class UserController {

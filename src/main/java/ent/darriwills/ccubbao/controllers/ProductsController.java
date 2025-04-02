@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.controllers;
+package ent.darriwills.ccubbao.controllers;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import ent.darriwills.qbao.data.repository.ProductsRepository;
-import ent.darriwills.qbao.middleware.ProductsModelAssembler;
-import ent.darriwills.qbao.models.Products;
+import ent.darriwills.ccubbao.data.repository.ProductsRepository;
+import ent.darriwills.ccubbao.middleware.ProductsModelAssembler;
+import ent.darriwills.ccubbao.models.Products;
 
 @RestController
 public class ProductsController {

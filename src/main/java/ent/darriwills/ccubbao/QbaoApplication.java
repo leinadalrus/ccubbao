@@ -1,13 +1,14 @@
-package ent.darriwills.qbao;
+package ent.darriwills.ccubbao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QbaoApplication {
+public class CcubbaoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QbaoApplication.class, args);
+		SpringApplication.run(CcubbaoApplication.class, args);
 	}
 
 }
+1

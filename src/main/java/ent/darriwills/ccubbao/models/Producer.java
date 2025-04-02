@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.models;
+package ent.darriwills.ccubbao.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,8 +8,8 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "consumers")
-public class Customer extends User {
+@Table(name = "producers")
+public class Producer extends User {
     private @Id Long id;
 
     @NotNull
@@ -22,7 +22,7 @@ public class Customer extends User {
     @Column(name = "timestamp")
     private String timeStamp;
 
-    public Customer(String username,
+    public Producer(String username,
         String membership,
         String avatar,
         String timeStamp
@@ -33,7 +33,7 @@ public class Customer extends User {
         this.timeStamp = timeStamp;
     }
 
-    public Customer() {}
+    public Producer() {}
 
     public Long getId() {
         return id;
@@ -75,14 +75,14 @@ public class Customer extends User {
         public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (!(o instanceof Customer))
+        if (!(o instanceof Producer))
             return false;
 
-        Customer customer = (Customer) o;
+        Producer producer = (Producer) o;
 
-        return Objects.equals(this.id, customer.id)
-            && Objects.equals(this.username, customer.username)
-            && Objects.equals(this.timeStamp, customer.timeStamp);
+        return Objects.equals(this.id, producer.id)
+            && Objects.equals(this.username, producer.username)
+            && Objects.equals(this.timeStamp, producer.timeStamp);
     }
 
     @Override
@@ -92,7 +92,7 @@ public class Customer extends User {
 
     @Override
     public String toString() {
-        return "Customer{" + "id=" + this.id + ", username=" + this.username + "'\'"
+        return "Producer{" + "id=" + this.id + ", username=" + this.username + "'\'"
             + ", timeStamp=" + this.timeStamp + "}";
     }
 }

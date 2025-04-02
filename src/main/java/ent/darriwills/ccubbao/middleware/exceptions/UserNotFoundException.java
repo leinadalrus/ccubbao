@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.middleware.exceptions;
+package ent.darriwills.ccubbao.middleware.exceptions;
 
 public class UserNotFoundException extends RuntimeException {
     UserNotFoundException(Long id) {

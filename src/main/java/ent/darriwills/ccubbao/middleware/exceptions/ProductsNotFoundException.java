@@ -1,4 +1,4 @@
-package ent.darriwills.qbao.middleware.exceptions;
+package ent.darriwills.ccubbao.middleware.exceptions;
 
 public class ProductsNotFoundException extends RuntimeException {
     ProductsNotFoundException(Long id) {
